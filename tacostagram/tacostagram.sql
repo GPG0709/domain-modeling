@@ -1,1 +1,32 @@
 
+CREATE TABLE user ( 
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+username TEXT,
+real_name TEXT,
+location TEXT
+);
+
+CREATE TABLE posts (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+created_at TEXT,
+user_id INTEGER
+);
+
+CREATE TABLE likes (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+user_id INTEGER,
+post_id INTEGER,
+);
+
+CREATE TABLE comments (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+user_id INTEGER,
+post_id INTEGER,
+body TEXT
+);
+
+CREATE TABLE followers (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+follower_user_id INTEGER,
+follwed_user_id INTEGER
+);
